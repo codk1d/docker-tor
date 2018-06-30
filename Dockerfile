@@ -16,7 +16,7 @@ RUN gpg --verify tor-browser-linux64-${TOR_VERSION}_en-US.tar.xz.asc tor-browser
 
 RUN tar --extract --xz --file tor-browser-linux64-${TOR_VERSION}_en-US.tar.xz
 
-FROM debian:stretch-20180312 as tor
+FROM debian:stretch-20180625 as tor
 
 RUN apt-get --quiet update && DEBIAN_FRONTEND=noninteractive apt-get --quiet --assume-yes install libgtk-3-0 libdbus-glib-1-2 libxt6 libcanberra-gtk-module libcanberra-gtk3-module
 

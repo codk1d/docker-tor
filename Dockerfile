@@ -1,6 +1,6 @@
 FROM buildpack-deps:stretch-curl as downloader
 
-ARG TOR_VERSION=7.5.4
+ARG TOR_VERSION=7.5.6
 
 RUN apt-get --quiet update && DEBIAN_FRONTEND=noninteractive apt-get --quiet --assume-yes install xz-utils
 

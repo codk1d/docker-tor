@@ -1,6 +1,6 @@
 FROM buildpack-deps:stretch-curl as downloader
 
-ARG TOR_VERSION=7.5.6
+ARG TOR_VERSION=8.0.3
 
 ARG GPG_KEYS=0x4E2C6E8793298290
 

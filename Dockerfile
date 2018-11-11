@@ -6,7 +6,7 @@ ARG GPG_KEYS=0x4E2C6E8793298290
 
 RUN apt-get --quiet update && DEBIAN_FRONTEND=noninteractive apt-get --quiet --assume-yes install xz-utils
 
-RUN (gpg --keyserver pool.sks-keyservers.net --recv-keys ${GPG_KEYS} || gpg --keyserver pgp.mit.edu --recv-keys ${GPG_KEYS})
+RUN (gpg --keyserver keyserver.cns.vt.edu --recv-keys ${GPG_KEYS} || gpg --keyserver pool.sks-keyservers.net --recv-keys ${GPG_KEYS} || gpg --keyserver pgp.mit.edu --recv-keys ${GPG_KEYS})
 
 RUN gpg --fingerprint 0x4E2C6E8793298290
 
